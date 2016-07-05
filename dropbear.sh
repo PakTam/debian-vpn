@@ -14,12 +14,12 @@ service dropbear restart
 #
 cd
 
-wget -O dropmon "https://raw.githubusercontent.com/baymaxbhai/debian7os/master/dropmon.sh"
-wget -O userlogin.sh "https://raw.githubusercontent.com/baymaxbhai/debian7os/master/userlogin.sh"
-wget -O userexpired.sh "https://raw.githubusercontent.com/baymaxbhai/debian7os/master/userexpired.sh"
-wget -O userlimit.sh "https://raw.githubusercontent.com/baymaxbhai/debian7os/master/userlimit.sh"
-wget -O expire.sh "https://raw.githubusercontent.com/baymaxbhai/debian7os/master/expire.sh"
-wget -O autokill.sh "https://raw.githubusercontent.com/baymaxbhai/debian7os/master/autokill.sh"
+wget -O dropmon "https://raw.githubusercontent.com/PakTam/debianos7/master/dropmon.sh"
+wget -O userlogin.sh "https://raw.githubusercontent.com/PakTam/debianos7/master/userlogin.sh"
+wget -O userexpired.sh "https://raw.githubusercontent.com/PakTam/debianos7/master/userexpired.sh"
+wget -O userlimit.sh "https://raw.githubusercontent.com/PakTam/debianos7/master/userlimit.sh"
+wget -O expire.sh "https://raw.githubusercontent.com/PakTam/debianos7/master/expire.sh"
+wget -O autokill.sh "https://raw.githubusercontent.com/PakTam/debianos7/master/autokill.sh"
 echo "@reboot root /root/userlimit.sh" > /etc/cron.d/userlimit
 echo "* * * * * service dropbear restart" > /etc/cron.d/dropbear
 echo "@reboot root /root/autokill.sh" > /etc/cron.d/autokill
